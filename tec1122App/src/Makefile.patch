@@ -1,0 +1,13 @@
+--- Makefile	2018-09-09 13:02:09.827603575 -0700
++++ /opt/epics/synApps/support/xxx-master/xxxApp/src/Makefile	2018-06-27 13:56:23.670772606 -0700
+@@ -391,10 +391,6 @@
+   endif
+ endif
+ 
+-# Sub record to convert long int to float for Meerstetter protocol
+-$(PROD_NAME)_SRCS += intToFloat.cpp
+-$(DBD_NAME)_DBD += intToFloat.dbd
+-
+ $(PROD_NAME)_LIBS += $(EPICS_BASE_IOC_LIBS)
+ 
+ # <name>_registerRecordDeviceDriver.cpp will be created from <name>.dbd

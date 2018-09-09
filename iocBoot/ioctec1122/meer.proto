@@ -1,0 +1,65 @@
+Terminator = CR;
+
+
+# General Get/Set 
+sendCommand {
+	out "#\$1%(SEQ)04X\$2%0<xmodem>";
+	in  "!\$1%(SEQ)=04X\?\?\?\?";
+}
+
+setSpeed {
+	out "#\$1%(SEQ)04X\$2%08X%0<xmodem>";
+	in  "!\$1%(SEQ)=04X\?\?\?\?";
+}
+
+getFirmwareID {
+	out "#\$1%(SEQ)04X\$2%0<xmodem>";
+	in  "!\$1%(SEQ)=04X%20c\?\?\?\?";
+	@init {
+		out "#\$1%(SEQ)04X\$2%0<xmodem>";
+		in  "!\$1%(SEQ)=04X%20c\?\?\?\?";
+	}
+}
+
+# Parameter Get/Set
+getStringParam {
+	out "#\$1%(SEQ)04X?VR\$2%0<xmodem>";
+	in  "!\$1%(SEQ)=04X%20c\?\?\?\?";
+	@init {
+		out "#\$1%(SEQ)04X?VR\$2%0<xmodem>";
+		in  "!\$1%(SEQ)=04X%20c\?\?\?\?";
+	}
+}
+
+setStringParam {
+	out "#\$1%(SEQ)04X\$2%s%0<xmodem>";
+	in  "!\$1%(SEQ)=04X\?\?\?\?";
+}
+
+getIntParam {
+	out "#\$1%(SEQ)04X?VR\$2%0<xmodem>";
+	in  "!\$1%(SEQ)=04X%08X%0<xmodem>";
+	@init {
+		out "#\$1%(SEQ)04X?VR\$2%0<xmodem>";
+		in  "!\$1%(SEQ)=04X%08X%0<xmodem>";
+	}
+}
+
+setIntParam {
+	out "#\$1%(SEQ)04XVS\$2%08X%0<xmodem>";
+	in  "!\$1%(SEQ)=04X\?\?\?\?";
+}
+
+getFloatParam {
+	out "#\$1%(SEQ)04X?VR\$2%0<xmodem>";
+	in  "!\$1%(SEQ)=04X%08X%0<xmodem>";
+	@init {
+		out "#\$1%(SEQ)04X?VR\$2%0<xmodem>";
+		in  "!\$1%(SEQ)=04X%08X%0<xmodem>";
+	}
+}
+
+setFloatParam {
+	out "#\$1%(SEQ)04XVS\$2%08X%0<xmodem>";
+	in  "!\$1%(SEQ)=04X\?\?\?\?";
+}

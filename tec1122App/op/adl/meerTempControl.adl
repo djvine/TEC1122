@@ -1,0 +1,1734 @@
+
+file {
+	name="/opt/epics/synApps/ioc/lab/labApp/op/adl/meerTempControl.adl"
+	version=030114
+}
+display {
+	object {
+		x=131
+		y=176
+		width=800
+		height=800
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+composite {
+	object {
+		x=25
+		y=720
+		width=754
+		height=53
+	}
+	"composite name"=""
+	"composite file"="meerStatus.adl"
+}
+rectangle {
+	object {
+		x=5
+		y=35
+		width=390
+		height=100
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=45
+		y=37
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Nominal Temperature"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=43
+		y=62
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Target Object Temp [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=62
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:TargetObjectTemp_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=62
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:TargetObjectTemp.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=43
+		y=87
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Coarse Temp Ramp [C/s]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=87
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:CoarseTempRamp_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=87
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:CoarseTempRamp.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=43
+		y=112
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Proximity Width [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=112
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:ProximityWidth_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=112
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:ProximityWidth.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=325
+		y=5
+		width=150
+		height=30
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="$(TITLE)"
+	align="horiz. centered"
+}
+rectangle {
+	object {
+		x=395
+		y=35
+		width=390
+		height=100
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=435
+		y=37
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2 Nominal Temperature"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=433
+		y=62
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Target Object Temp [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=62
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:TargetObjectTemp_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=62
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:TargetObjectTemp.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=433
+		y=87
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Coarse Temp Ramp [C/s]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=87
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:CoarseTempRamp_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=87
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:CoarseTempRamp.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=433
+		y=112
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Proximity Width [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=112
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:ProximityWidth_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=112
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:ProximityWidth.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=135
+		width=390
+		height=125
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=45
+		y=137
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Temp Controller PID Values"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=43
+		y=162
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Kp [%/C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=162
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:Kp_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=162
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:Kp.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=43
+		y=187
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Ti [s]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=187
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:Ti_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=187
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:Ti.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=43
+		y=212
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Td [s]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=212
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:Td_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=212
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:Td.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=42
+		y=235
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="D Part Damping PT1"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=252
+		y=235
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:DPartDamping_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=147
+		y=235
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:DPartDamping.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=395
+		y=135
+		width=390
+		height=125
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=435
+		y=137
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2 Temp Controller PID Values"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=433
+		y=162
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Kp [%/C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=162
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:Kp_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=162
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:Kp.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=433
+		y=187
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Ti [s]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=187
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:Ti_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=187
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:Ti.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=433
+		y=212
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Td [s]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=212
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:Td_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=212
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:Td.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=432
+		y=235
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="D Part Damping PT1"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=642
+		y=235
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:DPartDamping_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=537
+		y=235
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:DPartDamping.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=260
+		width=390
+		height=75
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=75
+		y=262
+		width=250
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Modelization For Thermal Power Control"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=75
+		y=287
+		width=250
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:ModelizationThermalPowerReg_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+menu {
+	object {
+		x=75
+		y=312
+		width=250
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:ModelizationThermalPowerReg.VAL"
+		clr=54
+		bclr=5
+	}
+}
+rectangle {
+	object {
+		x=395
+		y=260
+		width=390
+		height=75
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=465
+		y=262
+		width=250
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2 Modelization For Thermal Power Control"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=465
+		y=287
+		width=250
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:ModelizationThermalPowerReg_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+menu {
+	object {
+		x=465
+		y=312
+		width=250
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:ModelizationThermalPowerReg.VAL"
+		clr=54
+		bclr=5
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=335
+		width=390
+		height=100
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=45
+		y=337
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Peltier Characteristics"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=43
+		y=362
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Maximal Current Imax [A]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=362
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:MaxCurrentImax_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=362
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:MaxCurrentImax.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=43
+		y=387
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Delta Tamp dTmax [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=387
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:dTmax_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=387
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:dTmax.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=43
+		y=412
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Positive Current Is"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=412
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:PositiveCurrentIs_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+menu {
+	object {
+		x=148
+		y=412
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:PositiveCurrentIs.VAL"
+		clr=54
+		bclr=5
+	}
+}
+rectangle {
+	object {
+		x=395
+		y=335
+		width=390
+		height=100
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=435
+		y=337
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2 Peltier Characteristics"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=433
+		y=362
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Maximal Current Imax [A]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=362
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:MaxCurrentImax_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=362
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:MaxCurrentImax.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=433
+		y=387
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Delta Tamp dTmax [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=387
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:dTmax_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=387
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:dTmax.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=433
+		y=412
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Positive Current Is"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=412
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:PositiveCurrentIs_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+menu {
+	object {
+		x=538
+		y=412
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:PositiveCurrentIs.VAL"
+		clr=54
+		bclr=5
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=435
+		width=390
+		height=75
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=45
+		y=437
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Resistor Characteristics"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=43
+		y=462
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Resistance [Ohm]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=462
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:Resistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=462
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:Resistance.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=43
+		y=487
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Maximal Current [A]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=487
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:MaximalCurrent_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=487
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:MaximalCurrent.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=395
+		y=435
+		width=390
+		height=75
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=435
+		y=437
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2 Resistor Characteristics"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=433
+		y=462
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Resistance [Ohm]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=462
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:Resistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=462
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:Resistance.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=433
+		y=487
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Maximal Current [A]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=487
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:MaximalCurrent_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=487
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:MaximalCurrent.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=510
+		width=390
+		height=75
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=45
+		y=512
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Peltier, Heat Only - Cool Only Boundaries"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=43
+		y=537
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Upper Limit"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=537
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:UpperBoundary_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=537
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:UpperBoundary.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=43
+		y=562
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lower Limit"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=562
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:LowerBoundary_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=562
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:LowerBoundary.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=395
+		y=510
+		width=390
+		height=75
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=435
+		y=512
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2, Peltier Heat Only - Cool Only Boundaries"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=433
+		y=537
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Upper Limit"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=537
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:UpperBoundary_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=537
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:UpperBoundary.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=433
+		y=562
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lower Limit"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=562
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:LowerBoundary_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=562
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:LowerBoundary.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}

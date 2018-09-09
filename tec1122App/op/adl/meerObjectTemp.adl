@@ -1,0 +1,1446 @@
+
+file {
+	name="/opt/epics/synApps/ioc/lab/labApp/op/adl/meerObjectTemp.adl"
+	version=030114
+}
+display {
+	object {
+		x=6
+		y=60
+		width=800
+		height=800
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+composite {
+	object {
+		x=29
+		y=720
+		width=754
+		height=53
+	}
+	"composite name"=""
+	"composite file"="meerStatus.adl"
+}
+rectangle {
+	object {
+		x=5
+		y=35
+		width=390
+		height=75
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=45
+		y=37
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Object Measurement Settings"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=43
+		y=62
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp Offset [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=62
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:TempOffset_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=62
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:TempOffset.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=43
+		y=87
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp Gain [C/C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=253
+		y=87
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:TempGain_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=148
+		y=87
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:TempGain.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=331
+		y=5
+		width=150
+		height=30
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Object Temp: $(TITLE)"
+	align="horiz. centered"
+}
+rectangle {
+	object {
+		x=395
+		y=35
+		width=390
+		height=75
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=435
+		y=37
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2 Object Measurement Settings"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=433
+		y=62
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp Offset [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=62
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:TempOffset_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=62
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:TempOffset.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=433
+		y=87
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp Gain [C/C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=643
+		y=87
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:TempGain_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=538
+		y=87
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:TempGain.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=110
+		width=390
+		height=100
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=45
+		y=112
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Actual Object Temp Error Limits"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=42
+		y=137
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Upper Error Thresh [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=252
+		y=137
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:UpperErrorThreshold_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=147
+		y=137
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:UpperErrorThreshold.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=42
+		y=162
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lower Error Thresh [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=252
+		y=162
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:LowerErrorThreshold_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=147
+		y=162
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:LowerErrorThreshold.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=42
+		y=187
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max Temp Change [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=252
+		y=187
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:MaxTempChange_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=147
+		y=187
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:MaxTempChange.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=395
+		y=110
+		width=390
+		height=100
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=435
+		y=112
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2 Actual Object Temp Error Limits"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=432
+		y=137
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Upper Error Thresh [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=642
+		y=137
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:UpperErrorThreshold_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=537
+		y=137
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:UpperErrorThreshold.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=432
+		y=162
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lower Error Thresh [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=642
+		y=162
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:LowerErrorThreshold_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=537
+		y=162
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:LowerErrorThreshold.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=432
+		y=187
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max Temp Change [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=642
+		y=187
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:MaxTempChange_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=537
+		y=187
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:MaxTempChange.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=210
+		width=390
+		height=100
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=45
+		y=212
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Object Temp Stability Indicator Settings"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=42
+		y=237
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp Deviation [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=252
+		y=237
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:TemperatureDeviation_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=147
+		y=237
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:TemperatureDeviation.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=42
+		y=262
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Min Time In Window [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=252
+		y=262
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:MinTimeInWindow_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=147
+		y=262
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:MinTimeInWindow.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=42
+		y=287
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max Stabil. Time [s]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=252
+		y=287
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:MaxStabilizationTime_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=147
+		y=287
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch1:MaxStabilizationTime.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=395
+		y=210
+		width=390
+		height=100
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=435
+		y=212
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2 Object Temp Stability Indicator Settings"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=432
+		y=237
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp Deviation [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=642
+		y=237
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:TemperatureDeviation_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=537
+		y=237
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:TemperatureDeviation.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=432
+		y=262
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Min Time In Window [C]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=642
+		y=262
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:MinTimeInWindow_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=537
+		y=262
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:MinTimeInWindow.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=432
+		y=287
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Max Stabil. Time [s]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=642
+		y=287
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:MaxStabilizationTime_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=537
+		y=287
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)Ch2:MaxStabilizationTime.VAL"
+		clr=14
+		bclr=5
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=454
+		width=390
+		height=200
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=45
+		y=456
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH1 Object Temp Measurement Limits"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=39
+		y=481
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Highest Voltage [V]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=249
+		y=481
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:HighestVoltage_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=39
+		y=506
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lowest Voltage [V]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=249
+		y=506
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:LowestVoltage_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=39
+		y=531
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lowest Resist. [Ohm]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=249
+		y=531
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:LowestResistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=39
+		y=556
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Highest Resist. [Ohm]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=249
+		y=556
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:HighestResistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=39
+		y=581
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp at Lowest ADC"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=249
+		y=581
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:TempAtLowestResistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=39
+		y=606
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp at Highest ADC"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=249
+		y=606
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:TempAtHighestResistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=39
+		y=631
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Sensor Type"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=249
+		y=631
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch1:SensorTypeSelection_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=395
+		y=454
+		width=390
+		height=200
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)Ch1:ObjectTemp.VAL"
+	}
+}
+text {
+	object {
+		x=435
+		y=456
+		width=310
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CH2 Object Temp Measurement Limits"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=429
+		y=481
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Highest Voltage [V]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=639
+		y=481
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:HighestVoltage_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=429
+		y=506
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lowest Voltage [V]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=639
+		y=506
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:LowestVoltage_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=429
+		y=531
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lowest Resist. [Ohm]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=639
+		y=531
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:LowestResistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=429
+		y=556
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Highest Resist. [Ohm]"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=639
+		y=556
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:HighestResistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=429
+		y=581
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp at Lowest ADC"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=639
+		y=581
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:TempAtLowestResistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=429
+		y=606
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Temp at Highest ADC"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=639
+		y=606
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:TempAtHighestResistance_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=429
+		y=631
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Sensor Type"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=639
+		y=631
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)Ch2:SensorTypeSelection_RBV.VAL"
+		clr=54
+		bclr=5
+	}
+	align="horiz. right"
+	limits {
+	}
+}
