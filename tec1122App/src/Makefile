@@ -392,8 +392,8 @@ ifeq ($(OS_CLASS), Linux)
 endif
 
 # Sub record to convert long int to float for Meerstetter protocol
-$(PROD_NAME)_SRCS += intToFloat.cpp
-$(DBD_NAME)_DBD += intToFloat.dbd
+$(PROD_NAME)_SRCS += intToFloat.cpp floatToInt.cpp
+$(DBD_NAME)_DBD += intToFloat.dbd floatToInt.dbd
 
 $(PROD_NAME)_LIBS += $(EPICS_BASE_IOC_LIBS)
 
